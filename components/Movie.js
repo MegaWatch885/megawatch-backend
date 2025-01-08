@@ -2,9 +2,6 @@ import axios, { all } from "axios";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { LiaUikit } from "react-icons/lia";
-import { MdKeyOff } from "react-icons/md";
-import { PiGifDuotone } from "react-icons/pi";
 
 
 export default function Movie(
@@ -30,9 +27,10 @@ export default function Movie(
 
         // If streaming For Movie 
         watchonline: existingWatchonline,
+        watchonline1: existingWatchonline1,
         watchonline2: existingWatchonline2,
 
-        // If streaming For Series
+        // If streaming For Series Server - 01
         watchep01: existingWatchep01,
         watchEp02: existingWatchEp02,
         watchEp03: existingWatchEp03,
@@ -58,6 +56,62 @@ export default function Movie(
         watchEp23: existingWatchEp23,
         watchEp24: existingWatchEp24,
         watchEp25: existingWatchEp25,
+
+        // If streaming For Series Server - 02
+        watchep01s2: existingWatchep01S2,
+        watchEp02s2: existingWatchEp02S2,
+        watchEp03s2: existingWatchEp03S2,
+        watchEp04s2: existingWatchEp04S2,
+        watchEp05s2: existingWatchEp05S2,
+        watchEp06s2: existingWatchEp06S2,
+        watchEp07s2: existingWatchEp07S2,
+        watchEp08s2: existingWatchEp08S2,
+        watchEp09s2: existingWatchEp09S2,
+        watchEp10s2: existingWatchEp10S2,
+        watchEp11s2: existingWatchEp11S2,
+        watchEp12s2: existingWatchEp12S2,
+        watchEp13s2: existingWatchEp13S2,
+        watchEp14s2: existingWatchEp14S2,
+        watchEp15s2: existingWatchEp15S2,
+        watchEp16s2: existingWatchEp16S2,
+        watchEp17s2: existingWatchEp17S2,
+        watchEp18s2: existingWatchEp18S2,
+        watchEp19s2: existingWatchEp19S2,
+        watchEp20s2: existingWatchEp20S2,
+        watchEp21s2: existingWatchEp21S2,
+        watchEp22s2: existingWatchEp22S2,
+        watchEp23s2: existingWatchEp23S2,
+        watchEp24s2: existingWatchEp24S2,
+        watchEp25s2: existingWatchEp25S2,
+
+        // If streaming For Series Server - 03
+        watchep01s3: existingWatchep01S3,
+        watchEp02s3: existingWatchEp02S3,
+        watchEp03s3: existingWatchEp03S3,
+        watchEp04s3: existingWatchEp04S3,
+        watchEp05s3: existingWatchEp05S3,
+        watchEp06s3: existingWatchEp06S3,
+        watchEp07s3: existingWatchEp07S3,
+        watchEp08s3: existingWatchEp08S3,
+        watchEp09s3: existingWatchEp09S3,
+        watchEp10s3: existingWatchEp10S3,
+        watchEp11s3: existingWatchEp11S3,
+        watchEp12s3: existingWatchEp12S3,
+        watchEp13s3: existingWatchEp13S3,
+        watchEp14s3: existingWatchEp14S3,
+        watchEp15s3: existingWatchEp15S3,
+        watchEp16s3: existingWatchEp16S3,
+        watchEp17s3: existingWatchEp17S3,
+        watchEp18s3: existingWatchEp18S3,
+        watchEp19s3: existingWatchEp19S3,
+        watchEp20s3: existingWatchEp20S3,
+        watchEp21s3: existingWatchEp21S3,
+        watchEp22s3: existingWatchEp22S3,
+        watchEp23s3: existingWatchEp23S3,
+        watchEp24s3: existingWatchEp24S3,
+        watchEp25s3: existingWatchEp25S3,
+
+
 
         // Download Link 480p
         dlinkDropgalaxy480p: existingDlinkDropgalaxy480p,
@@ -139,7 +193,9 @@ export default function Movie(
 
     // If Streaming For Movie
     const [watchonline, setWatchonline] = useState(existingWatchonline || ''); //
+    const [watchonline1, setWatchonline1] = useState(existingWatchonline1 || ''); //
     const [watchonline2, setWatchonline2] = useState(existingWatchonline2 || ''); //
+
 
     // If Streaming For Series
     const [watchep01, setWatchep01] = useState(existingWatchep01 || ''); //
@@ -167,6 +223,61 @@ export default function Movie(
     const [watchEp23, setWatchEp23] = useState(existingWatchEp23 || ''); //
     const [watchEp24, setWatchEp24] = useState(existingWatchEp24 || ''); //
     const [watchEp25, setWatchEp25] = useState(existingWatchEp25 || ''); //
+
+    // If Streaming For Series Server - 2
+    const [watchep01s2, setWatchep01S2] = useState(existingWatchep01S2 || ''); //
+    const [watchEp02s2, setWatchEp02S2] = useState(existingWatchEp02S2 || ''); //
+    const [watchEp03s2, setWatchEp03S2] = useState(existingWatchEp03S2 || ''); //
+    const [watchEp04s2, setWatchEp04S2] = useState(existingWatchEp04S2 || ''); //
+    const [watchEp05s2, setWatchEp05S2] = useState(existingWatchEp05S2 || ''); //
+    const [watchEp06s2, setWatchEp06S2] = useState(existingWatchEp06S2 || ''); //
+    const [watchEp07s2, setWatchEp07S2] = useState(existingWatchEp07S2 || ''); //
+    const [watchEp08s2, setWatchEp08S2] = useState(existingWatchEp08S2 || ''); //
+    const [watchEp09s2, setWatchEp09S2] = useState(existingWatchEp09S2 || ''); //
+    const [watchEp10s2, setWatchEp10S2] = useState(existingWatchEp10S2 || ''); //
+    const [watchEp11s2, setWatchEp11S2] = useState(existingWatchEp11S2 || ''); //
+    const [watchEp12s2, setWatchEp12S2] = useState(existingWatchEp12S2 || ''); //
+    const [watchEp13s2, setWatchEp13S2] = useState(existingWatchEp13S2 || ''); //
+    const [watchEp14s2, setWatchEp14S2] = useState(existingWatchEp14S2 || ''); //
+    const [watchEp15s2, setWatchEp15S2] = useState(existingWatchEp15S2 || ''); //
+    const [watchEp16s2, setWatchEp16S2] = useState(existingWatchEp16S2 || ''); //
+    const [watchEp17s2, setWatchEp17S2] = useState(existingWatchEp17S2 || ''); //
+    const [watchEp18s2, setWatchEp18S2] = useState(existingWatchEp18S2 || ''); //
+    const [watchEp19s2, setWatchEp19S2] = useState(existingWatchEp19S2 || ''); //
+    const [watchEp20s2, setWatchEp20S2] = useState(existingWatchEp20S2 || ''); //
+    const [watchEp21s2, setWatchEp21S2] = useState(existingWatchEp21S2 || ''); //
+    const [watchEp22s2, setWatchEp22S2] = useState(existingWatchEp22S2 || ''); //
+    const [watchEp23s2, setWatchEp23S2] = useState(existingWatchEp23S2 || ''); //
+    const [watchEp24s2, setWatchEp24S2] = useState(existingWatchEp24S2 || ''); //
+    const [watchEp25s2, setWatchEp25S2] = useState(existingWatchEp25S2 || ''); //
+
+    // If Streaming For Series Server - 2
+    const [watchep01s3, setWatchep01S3] = useState(existingWatchep01S3 || ''); //
+    const [watchEp02s3, setWatchEp02S3] = useState(existingWatchEp02S3 || ''); //
+    const [watchEp03s3, setWatchEp03S3] = useState(existingWatchEp03S3 || ''); //
+    const [watchEp04s3, setWatchEp04S3] = useState(existingWatchEp04S3 || ''); //
+    const [watchEp05s3, setWatchEp05S3] = useState(existingWatchEp05S3 || ''); //
+    const [watchEp06s3, setWatchEp06S3] = useState(existingWatchEp06S3 || ''); //
+    const [watchEp07s3, setWatchEp07S3] = useState(existingWatchEp07S3 || ''); //
+    const [watchEp08s3, setWatchEp08S3] = useState(existingWatchEp08S3 || ''); //
+    const [watchEp09s3, setWatchEp09S3] = useState(existingWatchEp09S3 || ''); //
+    const [watchEp10s3, setWatchEp10S3] = useState(existingWatchEp10S3 || ''); //
+    const [watchEp11s3, setWatchEp11S3] = useState(existingWatchEp11S3 || ''); //
+    const [watchEp12s3, setWatchEp12S3] = useState(existingWatchEp12S3 || ''); //
+    const [watchEp13s3, setWatchEp13S3] = useState(existingWatchEp13S3 || ''); //
+    const [watchEp14s3, setWatchEp14S3] = useState(existingWatchEp14S3 || ''); //
+    const [watchEp15s3, setWatchEp15S3] = useState(existingWatchEp15S3 || ''); //
+    const [watchEp16s3, setWatchEp16S3] = useState(existingWatchEp16S3 || ''); //
+    const [watchEp17s3, setWatchEp17S3] = useState(existingWatchEp17S3 || ''); //
+    const [watchEp18s3, setWatchEp18S3] = useState(existingWatchEp18S3 || ''); //
+    const [watchEp19s3, setWatchEp19S3] = useState(existingWatchEp19S3 || ''); //
+    const [watchEp20s3, setWatchEp20S3] = useState(existingWatchEp20S3 || ''); //
+    const [watchEp21s3, setWatchEp21S3] = useState(existingWatchEp21S3 || ''); //
+    const [watchEp22s3, setWatchEp22S3] = useState(existingWatchEp22S3 || ''); //
+    const [watchEp23s3, setWatchEp23S3] = useState(existingWatchEp23S3 || ''); //
+    const [watchEp24s3, setWatchEp24S3] = useState(existingWatchEp24S3 || ''); //
+    const [watchEp25s3, setWatchEp25S3] = useState(existingWatchEp25S3 || ''); //
+
 
     // Download For 480p
     const [dlinkDropgalaxy480p, setDlinkDropgalaxy480p] = useState(existingDlinkDropgalaxy480p || ''); //
@@ -225,14 +336,24 @@ export default function Movie(
     const [category, setCategory] = useState(existingCategory || '');
     const [status, setStatus] = useState(existingStatus || '');
 
+    const [shows1, setShowS1] = useState(false)
+    const [shows2, setShowS2] = useState(false)
+    const [shows3, setShowS3] = useState(false)
+
+
 
     async function createMovie(ev) {
         ev.preventDefault();
 
         const data = {
-            title, slug, bgposter, smposter, titlecategory, description, rating, duration, year, genre, subtitle, size, quaility, youtubelink, language, watchonline, watchonline2, category, status, watchep01,
+            title, slug, bgposter, smposter, titlecategory, description, rating, duration, year, genre, subtitle, size, quaility, youtubelink, language, watchonline, watchonline1, watchonline2, category, status, watchep01,
             watchEp02, watchEp03, watchEp04, watchEp05, watchEp06, watchEp07, watchEp08, watchEp09, watchEp10, watchEp11, watchEp12, watchEp13, watchEp14, watchEp15, watchEp16, watchEp17, watchEp18,
-            watchEp19, watchEp20, watchEp21, watchEp22, watchEp23, watchEp24, watchEp25, dlinkDropgalaxy480p, dlinkDropgalaxy720p, dlinkDropgalaxy1080p, dlinkDropgalaxy4k,
+            watchEp19, watchEp20, watchEp21, watchEp22, watchEp23, watchEp24, watchEp25,
+            watchep01s2, watchEp02s2, watchEp03s2, watchEp04s2, watchEp05s2, watchEp06s2, watchEp07s2, watchEp08s2, watchEp09s2, watchEp10s2, watchEp11s2, watchEp12s2, watchEp13s2, watchEp14s2, watchEp15s2, watchEp16s2, watchEp17s2, watchEp18s2,
+            watchEp19s2, watchEp20s2, watchEp21s2, watchEp22s2, watchEp23s2, watchEp24s2, watchEp25s2,
+            watchep01s3, watchEp02s3, watchEp03s3, watchEp04s3, watchEp05s3, watchEp06s3, watchEp07s3, watchEp08s3, watchEp09s3, watchEp10s3, watchEp11s3, watchEp12s3, watchEp13s3, watchEp14s3, watchEp15s3, watchEp16s3, watchEp17s3, watchEp18s3,
+            watchEp19s3, watchEp20s3, watchEp21s3, watchEp22s3, watchEp23s3, watchEp24s3, watchEp25s3,
+            dlinkDropgalaxy480p, dlinkDropgalaxy720p, dlinkDropgalaxy1080p, dlinkDropgalaxy4k,
             dlinkUpload4ever480p, dlinkUpload4ever720p, dlinkUpload4ever1080p, dlinkUpload4ever4k, dlinkUploadrar480p, dlinkUploadrar720p, dlinkUploadrar1080p, dlinkUploadrar4k, dlinkMega4up480p, dlinkMega4up720p,
             dlinkMega4up1080p, dlinkMega4up4k, dlinkUploady480p, dlinkUploady720p, dlinkUploady1080p, dlinkUploady4k, dlinkGdrive480p, dlinkGdrive720p, dlinkGdrive1080p, dlinkGdrive4k, sshot1, sshot2, sshot3, sshot4, dlinkPhotojin480p, dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k,
             dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k
@@ -685,9 +806,9 @@ export default function Movie(
                         />
                     </div>
 
-                     {/* per quality download size */}
+                    {/* per quality download size */}
 
-                     <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
+                    <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
                         <label htmlFor="size480p">Select Size 480p :</label>
                         <input type="text" id='size480p' placeholder='480p Size Quality'
                             value={size480p}
@@ -729,16 +850,27 @@ export default function Movie(
                     </div>
 
                     <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
-                        <label htmlFor="watchonline2">Watch Online Link Server -2</label>
-                        <input type="text" id='watchonline2' placeholder='Movie watch online link server - 2'
+                        <label htmlFor="watchonline1">Watch Online Link Server -2</label>
+                        <input type="text" id='watchonline1' placeholder='Movie watch online link server - 2'
+                            value={watchonline1}
+                            onChange={ev => setWatchonline1(ev.target.value)}
+                        />
+                    </div>
+
+                    <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
+                        <label htmlFor="watchonline2">Watch Online Link Server -3</label>
+                        <input type="text" id='watchonline2' placeholder='Movie watch online link server - 3'
                             value={watchonline2}
                             onChange={ev => setWatchonline2(ev.target.value)}
                         />
                     </div>
 
-                    {/* If Streaming For Series (watchonline) */}
-                    <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
-                        <label >If Watch Onilne Is A Series :</label>
+                    {/* If Streaming For Series (watchonline) Server - 1 */}
+                    <div className='dresolbtn' onClick={() => setShowS1(!shows1)}>Streaming Links For Series - S1</div>
+
+                    {shows1 ? <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
+
+                        <label >Streaming Links For Series - S1:-</label>
 
 
                         {/*Watch Online Ep01 Link*/}
@@ -891,7 +1023,326 @@ export default function Movie(
                             onChange={ev => setWatchEp25(ev.target.value)}
                         />
 
-                    </div>
+                    </div> : null}
+
+
+                    {/* If Streaming For Series (watchonline) Server - 2 */}
+                    <div className='dresolbtn' onClick={() => setShowS2(!shows2)}>Streaming Links For Series - S2</div>
+
+                    {shows2 ? <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
+                        <label >Streaming Links For Series - S2</label>
+
+
+                        {/*Watch Online Ep01 Link*/}
+                        <input className="downloadsec" htmlFor="watchep01S2" type="text" id='watchep01S2' placeholder='Ep-01 Embed Link'
+                            value={watchep01s2}
+                            onChange={ev => setWatchep01S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep02 Link*/}
+                        <input className="downloadsec" htmlFor="watchEp02S2" type="text" id='watchEp02S2' placeholder='Ep-02 Embed Link'
+                            value={watchEp02s2}
+                            onChange={ev => setWatchEp02S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep03 Link*/}
+                        <input className="downloadsec" htmlFor="watchep03S2" type="text" id='watchEp03S2' placeholder='Ep-03 Embed Link'
+                            value={watchEp03s2}
+                            onChange={ev => setWatchEp03S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep04 Link*/}
+                        <input className="downloadsec" htmlFor="watchep04S2" type="text" id='watchEp04S2' placeholder='Ep-04 Embed Link'
+                            value={watchEp04s2}
+                            onChange={ev => setWatchEp04S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep05 Link*/}
+                        <input className="downloadsec" htmlFor="watchep05S2" type="text" id='watchEp05S2' placeholder='Ep-05 Embed Link'
+                            value={watchEp05s2}
+                            onChange={ev => setWatchEp05S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep06 Link*/}
+                        <input className="downloadsec" htmlFor="watchep06S2" type="text" id='watchEp06S2' placeholder='Ep-06 Embed Link'
+                            value={watchEp06s2}
+                            onChange={ev => setWatchEp06S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep07 Link*/}
+                        <input className="downloadsec" htmlFor="watchep07S2" type="text" id='watchEp07S2' placeholder='Ep-07 Embed Link'
+                            value={watchEp07s2}
+                            onChange={ev => setWatchEp07S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep08 Link*/}
+                        <input className="downloadsec" htmlFor="watchep08S2" type="text" id='watchEp08S2' placeholder='Ep-08 Embed Link'
+                            value={watchEp08s2}
+                            onChange={ev => setWatchEp08S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep09 Link*/}
+                        <input className="downloadsec" htmlFor="watchep09S2" type="text" id='watchEp09S2' placeholder='Ep-09 Embed Link'
+                            value={watchEp09s2}
+                            onChange={ev => setWatchEp09S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep10 Link*/}
+                        <input className="downloadsec" htmlFor="watchep10S2" type="text" id='watchEp10S2' placeholder='Ep-10 Embed Link'
+                            value={watchEp10s2}
+                            onChange={ev => setWatchEp10S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep11 Link*/}
+                        <input className="downloadsec" htmlFor="watchep11S2" type="text" id='watchEp11S2' placeholder='Ep-11 Embed Link'
+                            value={watchEp11s2}
+                            onChange={ev => setWatchEp11S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep12 Link*/}
+                        <input className="downloadsec" htmlFor="watchep12S2" type="text" id='watchEp12S2' placeholder='Ep-12 Embed Link'
+                            value={watchEp12s2}
+                            onChange={ev => setWatchEp12S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep13 Link*/}
+                        <input className="downloadsec" htmlFor="watchEp13S2" type="text" id='watchEp13S2' placeholder='Ep-13 Embed Link'
+                            value={watchEp13s2}
+                            onChange={ev => setWatchEp13S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep14 Link*/}
+                        <input className="downloadsec" htmlFor="watchep14S2" type="text" id='watchep14S2' placeholder='Ep-14 Embed Link'
+                            value={watchEp14s2}
+                            onChange={ev => setWatchEp14S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep15 Link*/}
+                        <input className="downloadsec" htmlFor="watchep15S2" type="text" id='watchep15S2' placeholder='Ep-15 Embed Link'
+                            value={watchEp15s2}
+                            onChange={ev => setWatchEp15S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep16 Link*/}
+                        <input className="downloadsec" htmlFor="watchep16S2" type="text" id='watchep16S2' placeholder='Ep-16 Embed Link'
+                            value={watchEp16s2}
+                            onChange={ev => setWatchEp16S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep17 Link*/}
+                        <input className="downloadsec" htmlFor="watchep17S2" type="text" id='watchep17S2' placeholder='Ep-17 Embed Link'
+                            value={watchEp17s2}
+                            onChange={ev => setWatchEp17S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep18 Link*/}
+                        <input className="downloadsec" htmlFor="watchep18S2" type="text" id='watchep18S2' placeholder='Ep-18 Embed Link'
+                            value={watchEp18s2}
+                            onChange={ev => setWatchEp18S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep19 Link*/}
+                        <input className="downloadsec" htmlFor="watchep19S2" type="text" id='watchep19S2' placeholder='Ep-19 Embed Link'
+                            value={watchEp19s2}
+                            onChange={ev => setWatchEp19S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep20 Link*/}
+                        <input className="downloadsec" htmlFor="watchep20S2" type="text" id='watchep20S2' placeholder='Ep-20 Embed Link'
+                            value={watchEp20s2}
+                            onChange={ev => setWatchEp20S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep21 Link*/}
+                        <input className="downloadsec" htmlFor="watchep21S2" type="text" id='watchep21S2' placeholder='Ep-21 Embed Link'
+                            value={watchEp21s2}
+                            onChange={ev => setWatchEp21S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep22 Link*/}
+                        <input className="downloadsec" htmlFor="watchep22S2" type="text" id='watchep22S2' placeholder='Ep-22 Embed Link'
+                            value={watchEp22s2}
+                            onChange={ev => setWatchEp22S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep23 Link*/}
+                        <input className="downloadsec" htmlFor="watchep23S2" type="text" id='watchep23S2' placeholder='Ep-23 Embed Link'
+                            value={watchEp23s2}
+                            onChange={ev => setWatchEp23S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep24 Link*/}
+                        <input className="downloadsec" htmlFor="watchep24S2" type="text" id='watchep24S2' placeholder='Ep-24 Embed Link'
+                            value={watchEp24s2}
+                            onChange={ev => setWatchEp24S2(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep25 Link*/}
+                        <input className="downloadsec" htmlFor="watchep25S2" type="text" id='watchep25S2' placeholder='Ep-25 Embed Link'
+                            value={watchEp25s2}
+                            onChange={ev => setWatchEp25S2(ev.target.value)}
+                        />
+
+                    </div> : null}
+
+                    {/* If Streaming For Series (watchonline) Server - 3 */}
+                    <div className='dresolbtn' onClick={() => setShowS3(!shows3)}>Streaming Links For Series - S3</div>
+
+                    {shows3 ? <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
+                        <label >Streaming Links For Series - S3</label>
+
+
+                        {/*Watch Online Ep01 Link*/}
+                        <input className="downloadsec" htmlFor="watchep01S3" type="text" id='watchep01S3' placeholder='Ep-01 Embed Link'
+                            value={watchep01s3}
+                            onChange={ev => setWatchep01S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep02 Link*/}
+                        <input className="downloadsec" htmlFor="watchEp02S3" type="text" id='watchEp02S3' placeholder='Ep-02 Embed Link'
+                            value={watchEp02s3}
+                            onChange={ev => setWatchEp02S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep03 Link*/}
+                        <input className="downloadsec" htmlFor="watchep03S2" type="text" id='watchEp03S3' placeholder='Ep-03 Embed Link'
+                            value={watchEp03s3}
+                            onChange={ev => setWatchEp03S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep04 Link*/}
+                        <input className="downloadsec" htmlFor="watchep04S3" type="text" id='watchEp04S3' placeholder='Ep-04 Embed Link'
+                            value={watchEp04s3}
+                            onChange={ev => setWatchEp04S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep05 Link*/}
+                        <input className="downloadsec" htmlFor="watchep05S3" type="text" id='watchEp05S3' placeholder='Ep-05 Embed Link'
+                            value={watchEp05s3}
+                            onChange={ev => setWatchEp05S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep06 Link*/}
+                        <input className="downloadsec" htmlFor="watchep06S3" type="text" id='watchEp06S3' placeholder='Ep-06 Embed Link'
+                            value={watchEp06s3}
+                            onChange={ev => setWatchEp06S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep07 Link*/}
+                        <input className="downloadsec" htmlFor="watchep07S3" type="text" id='watchEp07S3' placeholder='Ep-07 Embed Link'
+                            value={watchEp07s3}
+                            onChange={ev => setWatchEp07S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep08 Link*/}
+                        <input className="downloadsec" htmlFor="watchep08S3" type="text" id='watchEp08S3' placeholder='Ep-08 Embed Link'
+                            value={watchEp08s3}
+                            onChange={ev => setWatchEp08S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep09 Link*/}
+                        <input className="downloadsec" htmlFor="watchep09S3" type="text" id='watchEp09S3' placeholder='Ep-09 Embed Link'
+                            value={watchEp09s3}
+                            onChange={ev => setWatchEp09S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep10 Link*/}
+                        <input className="downloadsec" htmlFor="watchep10S3" type="text" id='watchEp10S3' placeholder='Ep-10 Embed Link'
+                            value={watchEp10s3}
+                            onChange={ev => setWatchEp10S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep11 Link*/}
+                        <input className="downloadsec" htmlFor="watchep11S3" type="text" id='watchEp11S3' placeholder='Ep-11 Embed Link'
+                            value={watchEp11s3}
+                            onChange={ev => setWatchEp11S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep12 Link*/}
+                        <input className="downloadsec" htmlFor="watchep12S3" type="text" id='watchEp12S3' placeholder='Ep-12 Embed Link'
+                            value={watchEp12s3}
+                            onChange={ev => setWatchEp12S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep13 Link*/}
+                        <input className="downloadsec" htmlFor="watchEp13S3" type="text" id='watchEp13S3' placeholder='Ep-13 Embed Link'
+                            value={watchEp13s3}
+                            onChange={ev => setWatchEp13S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep14 Link*/}
+                        <input className="downloadsec" htmlFor="watchep14S3" type="text" id='watchep14S3' placeholder='Ep-14 Embed Link'
+                            value={watchEp14s3}
+                            onChange={ev => setWatchEp14S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep15 Link*/}
+                        <input className="downloadsec" htmlFor="watchep15S3" type="text" id='watchep15S3' placeholder='Ep-15 Embed Link'
+                            value={watchEp15s3}
+                            onChange={ev => setWatchEp15S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep16 Link*/}
+                        <input className="downloadsec" htmlFor="watchep16S3" type="text" id='watchep16S3' placeholder='Ep-16 Embed Link'
+                            value={watchEp16s3}
+                            onChange={ev => setWatchEp16S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep17 Link*/}
+                        <input className="downloadsec" htmlFor="watchep17S3" type="text" id='watchep17S3' placeholder='Ep-17 Embed Link'
+                            value={watchEp17s3}
+                            onChange={ev => setWatchEp17S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep18 Link*/}
+                        <input className="downloadsec" htmlFor="watchep18S3" type="text" id='watchep18S3' placeholder='Ep-18 Embed Link'
+                            value={watchEp18s3}
+                            onChange={ev => setWatchEp18S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep19 Link*/}
+                        <input className="downloadsec" htmlFor="watchep19S3" type="text" id='watchep19S3' placeholder='Ep-19 Embed Link'
+                            value={watchEp19s3}
+                            onChange={ev => setWatchEp19S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep20 Link*/}
+                        <input className="downloadsec" htmlFor="watchep20S3" type="text" id='watchep20S3' placeholder='Ep-20 Embed Link'
+                            value={watchEp20s3}
+                            onChange={ev => setWatchEp20S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep21 Link*/}
+                        <input className="downloadsec" htmlFor="watchep21S3" type="text" id='watchep21S3' placeholder='Ep-21 Embed Link'
+                            value={watchEp21s3}
+                            onChange={ev => setWatchEp21S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep22 Link*/}
+                        <input className="downloadsec" htmlFor="watchep22S3" type="text" id='watchep22S3' placeholder='Ep-22 Embed Link'
+                            value={watchEp22s3}
+                            onChange={ev => setWatchEp22S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep23 Link*/}
+                        <input className="downloadsec" htmlFor="watchep23S3" type="text" id='watchep23S3' placeholder='Ep-23 Embed Link'
+                            value={watchEp23s3}
+                            onChange={ev => setWatchEp23S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep24 Link*/}
+                        <input className="downloadsec" htmlFor="watchep24S3" type="text" id='watchep24S3' placeholder='Ep-24 Embed Link'
+                            value={watchEp24s3}
+                            onChange={ev => setWatchEp24S3(ev.target.value)}
+                        />
+
+                        {/*Watch Online Ep25 Link*/}
+                        <input className="downloadsec" htmlFor="watchep25S3" type="text" id='watchep25S3' placeholder='Ep-25 Embed Link'
+                            value={watchEp25s3}
+                            onChange={ev => setWatchEp25S3(ev.target.value)}
+                        />
+
+                    </div> : null}
 
                     {/* If Screes Shots */}
 
@@ -984,6 +1435,7 @@ export default function Movie(
                             </div>
                         </div>
                     </div>
+
 
                 </div>
 
