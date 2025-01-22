@@ -21,7 +21,7 @@ export default async function handle(req, res) {
             dlinkDropgalaxy480p, dlinkDropgalaxy720p, dlinkDropgalaxy1080p, dlinkDropgalaxy4k,
             dlinkUpload4ever480p, dlinkUpload4ever720p, dlinkUpload4ever1080p, dlinkUpload4ever4k, dlinkUploadrar480p, dlinkUploadrar720p, dlinkUploadrar1080p, dlinkUploadrar4k, dlinkMega4up480p, dlinkMega4up720p,
             dlinkMega4up1080p, dlinkMega4up4k, dlinkUploady480p, dlinkUploady720p, dlinkUploady1080p, dlinkUploady4k, dlinkGdrive480p, dlinkGdrive720p, dlinkGdrive1080p, dlinkGdrive4k, sshot1, sshot2, sshot3, sshot4, dlinkPhotojin480p,
-            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k } = req.body;
+            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k, pmovie, smovie } = req.body;
 
         const movieData = await Movie.create({
             title, slug, bgposter, smposter, titlecategory, description, rating, duration, year, genre, subtitle, size, quaility, youtubelink, language, watchonline, watchonline1, watchonline2, watchonline3, watchonline4, category, status, watchep01,
@@ -34,7 +34,7 @@ export default async function handle(req, res) {
             dlinkDropgalaxy480p, dlinkDropgalaxy720p, dlinkDropgalaxy1080p, dlinkDropgalaxy4k,
             dlinkUpload4ever480p, dlinkUpload4ever720p, dlinkUpload4ever1080p, dlinkUpload4ever4k, dlinkUploadrar480p, dlinkUploadrar720p, dlinkUploadrar1080p, dlinkUploadrar4k, dlinkMega4up480p, dlinkMega4up720p,
             dlinkMega4up1080p, dlinkMega4up4k, dlinkUploady480p, dlinkUploady720p, dlinkUploady1080p, dlinkUploady4k, dlinkGdrive480p, dlinkGdrive720p, dlinkGdrive1080p, dlinkGdrive4k, sshot1, sshot2, sshot3, sshot4, dlinkPhotojin480p,
-            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k
+            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k, pmovie, smovie
 
         })
 
@@ -64,7 +64,7 @@ export default async function handle(req, res) {
             dlinkDropgalaxy480p, dlinkDropgalaxy720p, dlinkDropgalaxy1080p, dlinkDropgalaxy4k,
             dlinkUpload4ever480p, dlinkUpload4ever720p, dlinkUpload4ever1080p, dlinkUpload4ever4k, dlinkUploadrar480p, dlinkUploadrar720p, dlinkUploadrar1080p, dlinkUploadrar4k, dlinkMega4up480p, dlinkMega4up720p,
             dlinkMega4up1080p, dlinkMega4up4k, dlinkUploady480p, dlinkUploady720p, dlinkUploady1080p, dlinkUploady4k, dlinkGdrive480p, dlinkGdrive720p, dlinkGdrive1080p, dlinkGdrive4k, sshot1, sshot2, sshot3, sshot4, dlinkPhotojin480p,
-            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k } = req.body;
+            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k, pmovie, smovie } = req.body;
 
         await Movie.updateOne({ _id }, {
             title, slug, bgposter, smposter, titlecategory, description, rating, duration, year, genre, subtitle, size, quaility, youtubelink, language, watchonline, watchonline1, watchonline2, category, status, watchep01,
@@ -77,7 +77,7 @@ export default async function handle(req, res) {
             dlinkDropgalaxy480p, dlinkDropgalaxy720p, dlinkDropgalaxy1080p, dlinkDropgalaxy4k,
             dlinkUpload4ever480p, dlinkUpload4ever720p, dlinkUpload4ever1080p, dlinkUpload4ever4k, dlinkUploadrar480p, dlinkUploadrar720p, dlinkUploadrar1080p, dlinkUploadrar4k, dlinkMega4up480p, dlinkMega4up720p,
             dlinkMega4up1080p, dlinkMega4up4k, dlinkUploady480p, dlinkUploady720p, dlinkUploady1080p, dlinkUploady4k, dlinkGdrive480p, dlinkGdrive720p, dlinkGdrive1080p, dlinkGdrive4k, sshot1, sshot2, sshot3, sshot4, dlinkPhotojin480p,
-            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k
+            dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k, dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k, pmovie, smovie
         });
 
         res.json(true);

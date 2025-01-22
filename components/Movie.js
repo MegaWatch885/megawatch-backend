@@ -165,6 +165,10 @@ export default function Movie(
         size1080p: existingSize1080p,
         size4k: existingSize4k,
 
+        //Photo Button For Streaming
+        pmovie: existingPmovie,
+        smovie: existingSmovie,
+
 
         status: existingStatus,
 
@@ -331,6 +335,10 @@ export default function Movie(
     const [size1080p, setSize1080p] = useState(existingSize1080p || ''); //
     const [size4k, setSize4k] = useState(existingSize4k || ''); //
 
+    //Photo Button For Streaming
+    const [pmovie, setPmovie] = useState(existingPmovie || ''); //
+    const [smovie, setSmovie] = useState(existingSmovie || ''); //
+
 
 
     const [category, setCategory] = useState(existingCategory || '');
@@ -356,7 +364,7 @@ export default function Movie(
             dlinkDropgalaxy480p, dlinkDropgalaxy720p, dlinkDropgalaxy1080p, dlinkDropgalaxy4k,
             dlinkUpload4ever480p, dlinkUpload4ever720p, dlinkUpload4ever1080p, dlinkUpload4ever4k, dlinkUploadrar480p, dlinkUploadrar720p, dlinkUploadrar1080p, dlinkUploadrar4k, dlinkMega4up480p, dlinkMega4up720p,
             dlinkMega4up1080p, dlinkMega4up4k, dlinkUploady480p, dlinkUploady720p, dlinkUploady1080p, dlinkUploady4k, dlinkGdrive480p, dlinkGdrive720p, dlinkGdrive1080p, dlinkGdrive4k, sshot1, sshot2, sshot3, sshot4, dlinkPhotojin480p, dlinkPhotojin720p, dlinkPhotojin1080p, dlinkPhotojin4k,
-            dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k
+            dlinkHdcloud480p, dlinkHdcloud720p, dlinkHdcloud1080p, dlinkHdcloud4k, size480p, size720p, size1080p, size4k, pmovie, smovie
         };
 
 
@@ -1344,6 +1352,26 @@ export default function Movie(
 
                     </div> : null}
 
+                    {/* Photos For Streaming */}
+
+                    <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
+                        <label >Imp Photo Button :</label>
+
+                        <input className="downloadsec" htmlFor="pmovie" type="text" id='pmovie' placeholder='Photo Button For Movie'
+                            value={pmovie}
+                            onChange={ev => setPmovie(ev.target.value)}
+                        />
+
+                        <input className="downloadsec" htmlFor="smovie" type="text" id='smovie' placeholder='Photo Button For Series'
+                            value={smovie}
+                            onChange={ev => setSmovie(ev.target.value)}
+                        />
+
+
+                    </div>
+
+
+
                     {/* If Screes Shots */}
 
                     <div className='w-100 flex flex-col flex-left mb-2' data-aos="fade-up">
@@ -1435,7 +1463,7 @@ export default function Movie(
                             </div>
                         </div>
                     </div>
-                    
+
 
 
                 </div>

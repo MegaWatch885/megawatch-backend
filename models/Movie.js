@@ -159,6 +159,10 @@ const MovieSchema = new Schema({
     size1080p: { type: String },
     size4k: { type: String },
 
+    //Photo Button For Streaming
+    pmovie: { type: String },
+    smovie: { type: String },
+
     status: { type: String },
 
 }, {
